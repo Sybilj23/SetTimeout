@@ -15,18 +15,17 @@ intervalCount(function() {
     console.log('hi');
 }, 500, 3); // prints 'hi' at 500ms intervals a total of 3 times
 ***********************************************************************/
-
-function intervalCount(cb, delay, amount) {
-    // Your code here
-    let count = 0;
-    setInterval(() => {
-        cb();
-        count++;
-        if (count === amount) {
-            clearInterval(setInterval);
-        }
-    }, delay);
+let intervalCount = ( callback, delay, amount) =>{
+let count = 0;
+let interval =setInterval(()=>{
+    callback();
+    count++;
+    if(count === amount){
+        clearInterval(interval);
+    }
+}, delay)
 }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
