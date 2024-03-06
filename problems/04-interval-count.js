@@ -26,7 +26,7 @@ let interval =setInterval(()=>{
 }, delay)
 }
 
-//test
+//test1
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
     module.exports = intervalCount;
